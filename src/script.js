@@ -7,6 +7,39 @@ const options = {
   basic: {
     source: 'https://test-drm.hexaglobe.net/hrathod/data/sonu.mkv',
   },
+  ui_configuration: {
+    castReceiverAppId: '1BA79154',
+    controlPanelElements: [
+      'play_pause',
+      'time_and_duration',
+      'spacer',
+      'playback_rate',
+      'mute',
+      'volume',
+      'cast',
+      'fullscreen',
+      'airplay',
+    ],
+  },
+  advanced_features: [
+    {
+      name: 'backward_button',
+      visible: true,
+      data: {
+        backwardSeconds: 20,
+        color: '#f0ea20'
+      }
+    },
+    {
+      name: 'forward_button',
+      visible: true,
+      data: {
+        forwardSeconds: 20,
+        color: 'yellow'
+      },
+      position: 3
+    },
+  ]
 }
 const hexaPlayer = new HexaglobePlayer(video, videoContainer, options);
 

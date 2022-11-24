@@ -4,17 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="src/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <script type="application/javascript"
             src="https://github.com/videojs/mux.js/releases/download/v5.13.0/mux.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Teddy Movie's</title>
   </head>
   <body>
     <header>
-      <h1>Naadi Dosh</h1>
+<!--      <div class="animate__animated animate bounce card " style="width: 18rem;">-->
+<!--        <div class="container mt-3">-->
+<!--          <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Drishyam_2_2022_film_poster.jpg?20221103062657" class="card-img-top " alt="..."></div>-->
+<!--        <div class="card-body">-->
+<!--          <h5 class="card-title ms-1" style="color: #222222">Drishyam 2</h5>-->
+<!--          <button class="btn btn-primary mb-1 mt-1 ">Watch</button>-->
+<!--        </div>-->
+<!--      </div>-->
+
+      <div class="container h-100">
+        <div class="row align-middle" id="movie-cards">
+          <div class="col-md-6 col-lg-4 column" id="dri">
+            <div class="card gr-1">
+              <div class="txt">
+                <h1>Drishyam 2</h1>
+              </div>
+              <div class="ico-card">
+                <i class="fa fa-rebel"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 column" id="kan">
+            <div class="card gr-2">
+              <div class="txt">
+                <h1>Kantara</h1>
+              </div>
+              <div class="ico-card">
+                <i class="fa fa-codepen"></i>
+              </div>
+            </div>
+          </div>
+<!--          <div class="col-md-6 col-lg-4 column">-->
+<!--            <div class="card gr-3">-->
+<!--              <div class="txt">-->
+<!--                <h1>UX/UI WEBsite </br>AND MOBILE app</h1>-->
+<!--                <p>User Interface and User Experience Design.</p>-->
+<!--              </div>-->
+<!--              <a href="#">more</a>-->
+<!--              <div class="ico-card">-->
+<!--                <i class="fa fa-empire"></i>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+        </div>
+      </div>
     </header>
+    <h1 id="movieTitle"></h1>
     <main>
-      <section class="left">
+      <section style="padding: 20px" class="left">
         <div style="height: 1000px;width: 1000px">
           <div id="video-container">
             <video autoplay playsinline id="video" style="width:100%;height:100%">

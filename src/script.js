@@ -6,10 +6,9 @@ const video = document.querySelector('#video');
 const videoContainer = document.querySelector('#video-container');
 const options = {
   basic: {
-    source: 'https://test-drm.hexaglobe.net/hrathod/data/naadidosh.mkv',
+    source: 'https://test-drm.hexaglobe.net/hrathod/data/Dri2.mkv',
   },
   ui_configuration: {
-    castReceiverAppId: '1BA79154',
     controlPanelElements: [
       'play_pause',
       'time_and_duration',
@@ -46,3 +45,28 @@ const hexaPlayer = new HexaglobePlayer(video, videoContainer, options);
 
 hexaPlayer.init_()
 
+setTimeout(() => {
+  const movieTitle = document.querySelector('#movieTitle');
+  movieTitle.textContent = 'Now playing Drishyam 2';
+
+  const movieCards = document.querySelector('#movie-cards').children
+  for (const card of movieCards) {
+    card.addEventListener('click', () => {
+      if (card.id === 'dri') {
+        movieTitle.textContent = 'Now playing Drishyam 2';
+        hexaPlayer.loadAssets_({
+          basic: {
+            source: 'https://test-drm.hexaglobe.net/hrathod/data/Dri2.mkv'
+          }
+        })
+      } else {
+        movieTitle.textContent = 'Now playing Kantara';
+        hexaPlayer.loadAssets_({
+          basic: {
+            source: 'https://test-drm.hexaglobe.net/hrathod/data/Kan.mkv'
+          }
+        })
+      }
+    })
+  }
+}, 1000)

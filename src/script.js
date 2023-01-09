@@ -1,6 +1,6 @@
 import HexaglobePlayer from "@advanced-suite/front-hexa-player/dist/HexaglobePlayer.bundle";
 import "@advanced-suite/front-hexa-player/dist/index.css";
-import './style.css'
+import './style1.css'
 
 const video = document.querySelector('#video');
 const videoContainer = document.querySelector('#video-container');
